@@ -52,7 +52,16 @@
       this._physicalHeight = this.height * this._physicalCount;
 
       this.scroll.refresh(); // refresh iscroll
-    }    
+    },
+
+    /**
+     *
+     */
+     
+    scrollToItem: function (index) {
+      this.scroll.scrollTo(0, -index * this.height);
+      this.scrollHandler();
+    }   
 
   });
 
