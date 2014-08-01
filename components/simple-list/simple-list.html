@@ -1,0 +1,16 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../core-list/core-list.html">
+
+<polymer-element name="simple-list" extends="core-list" layout vertical fit>
+  <template>
+    <link rel="stylesheet" type="text/css" href="simple-list.css">
+
+    <div id="viewport" flex>
+      <div id="scroll"><content></content></div>
+    </div>
+
+  </template>
+
+  <script src="../iscroll/build/iscroll-probe.js"></script>
+  <script src="simple-list.js"></script>
+</polymer-element>

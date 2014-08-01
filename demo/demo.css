@@ -1,0 +1,38 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'RobotoDraft', sans-serif;
+}
+
+core-header-panel {
+  height: 100%;
+}
+
+core-toolbar {
+  background: #03a9f4;
+  color: white;
+}
+
+core-toolbar core-icon-button {
+  fill: white;
+}
+
+simple-list .item {
+  color: #444444;
+  height: 80px;
+  border-bottom: 1px solid #ccc;
+  padding: 20px 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+simple-list .item i {
+  font-size: 14px;
+  color: #999999;
+}
+
+.selected {
+  background: silver;
+}

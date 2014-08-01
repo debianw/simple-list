@@ -25,10 +25,14 @@
     "core-list": "Polymer/core-list#~0.3.4",
     "iscroll": "~5.1.2"
   },
-  "devDependencies": {
-    "font-roboto": "Polymer/font-roboto#~0.3.4",
-    "core-header-panel": "Polymer/core-header-panel#~0.3.4",
-    "core-toolbar": "Polymer/core-toolbar#~0.3.4",
-    "simple-list": "~0.0.1"
-  }
+  "_release": "0.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.1",
+    "commit": "27c757366382c6b97d78fe79ecc65fcc6e883bc2"
+  },
+  "_source": "git://github.com/debianw/simple-list.git",
+  "_target": "~0.0.1",
+  "_originalSource": "simple-list",
+  "_direct": true
 }
