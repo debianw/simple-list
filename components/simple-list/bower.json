@@ -1,0 +1,34 @@
+{
+  "name": "simple-list",
+  "version": "0.0.1",
+  "description": "simple-list extends from `Polymer/core-list`, it displays a virtual, infinite list. Instead of native scroll this component use iscroll",
+  "keywords": [
+    "Polymer",
+    "web-components",
+    "infinite",
+    "list"
+  ],
+  "authors": [
+    "Walter Chacon Solis"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/debianw/simple-list",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "~0.3.3",
+    "core-list": "Polymer/core-list#~0.3.4",
+    "iscroll": "~5.1.2"
+  },
+  "devDependencies": {
+    "font-roboto": "Polymer/font-roboto#~0.3.4",
+    "core-header-panel": "Polymer/core-header-panel#~0.3.4",
+    "core-toolbar": "Polymer/core-toolbar#~0.3.4",
+    "simple-list": "~0.0.1"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "simple-list",
+  "version": "0.0.1",
+  "devDependencies": {
+    "express": "^4.7.2"
+  }
+}
