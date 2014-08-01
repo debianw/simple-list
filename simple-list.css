@@ -8,6 +8,7 @@
 
 #viewport {
   overflow: hidden;
+  position: relative;
 }
 
 #scroll {

@@ -24,7 +24,9 @@ To take a look the demo just follow the steps:
   # node server
 ```
 
-Then go to http://your-local-ip:8080/demo
+Then go to:
+* http://your-local-ip:8080/demo/fit-list.html
+* http://your-local-ip:8080/demo/flex-list.html
 
 core-list
 ============
