@@ -14,6 +14,7 @@ _Simple infinite list. This is a Polymer web-component that can handle tons of d
 </simple-list>
 ```
 
-# Reference
+core-list
+============
 
 See the [component page](http://polymer-project.org/docs/elements/core-elements.html#core-list) for more information.
