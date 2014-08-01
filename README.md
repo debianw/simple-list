@@ -14,6 +14,18 @@ _Simple infinite list. This is a Polymer web-component that can handle tons of d
 </simple-list>
 ```
 
+## Demo
+
+To take a look the demo just follow the steps:
+
+```
+  # bower install
+  # npm install
+  # node server
+```
+
+Then go to http://your-local-ip:8080/demo
+
 core-list
 ============
 

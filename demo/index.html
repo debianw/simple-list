@@ -31,7 +31,7 @@
       <!-- simple-list -->
       <simple-list data="{{data}}" height="80">
         <template>
-          <div class="item {{ {selected: selected} | tokenList }}"> Item {{id}} <br /> <p><i>{{description}}</i></p> </div>
+          <div class="item {{ {selected: selected} | tokenList }}"> {{name}} <br /> <p><i>{{description}}</i></p> </div>
         </template>
       </simple-list>
       <!-- /simple-list -->
@@ -53,7 +53,7 @@
             for (var i = 0, len = 500; i < len; i++) {
               data.push({
                 id: i,
-                name: 'item-'+i,
+                name: 'Item: '+i,
                 description: 'description goes here ...'+i
               });
             }
