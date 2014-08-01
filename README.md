@@ -14,19 +14,10 @@ _Simple infinite list. This is a Polymer web-component that can handle tons of d
 </simple-list>
 ```
 
-## Demo
+## Demos
 
-To take a look the demo just follow the steps:
-
-```
-  # bower install
-  # npm install
-  # node server
-```
-
-Then go to:
-* http://your-local-ip:8080/demo/fit-list.html
-* http://your-local-ip:8080/demo/flex-list.html
+* [simple-list inside a fit layout](http://debianw.github.io/simple-list/demo/fit-list.html)
+* [simple-list inside a flex layout](http://debianw.github.io/simple-list/demo/flex-list.html)
 
 core-list
 ============
