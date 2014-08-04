@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <title>Simple List</title>
+
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <script src="../../platform/platform.js"></script>
+
+    <!-- components -->
+    <link rel="import" href="../../font-roboto/roboto.html">
+    <link rel="import" href="../../core-header-panel/core-header-panel.html">
+    <link rel="import" href="../../core-toolbar/core-toolbar.html">
+    <link rel="import" href="../../core-icon-button/core-icon-button.html">
+    <link rel="import" href="../../simple-list/simple-list.html">
+
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        font-family: 'RobotoDraft', sans-serif;
+      }
+
+      demo-list {
+        height: 100%;
+      }
+    </style>
+
+  </head>
+
+  <body unresolved touch-action="auto">
+
+    <demo-list></demo-list>
+
+    <polymer-element name="demo-list">
+      <template>
+
+        <style>
+          core-header-panel {
+            height: 100%;
+          }
+
+          core-toolbar {
+            background: #03a9f4;
+            color: white;
+          }
+
+          core-toolbar core-icon-button {
+            fill: white;
+          }
+
+          .item {
+            color: #444444;
+            height: 80px;
+            border-bottom: 1px solid #ccc;
+            padding: 20px 5px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+          }
+
+          .item i {
+            font-size: 14px;
+            color: #999999;
+          }
+
+          .selected {
+            background: #ebebeb;
+          }
+        </style>
+
+        <core-header-panel>
+          <core-toolbar>
+            <core-icon-button icon="menu"></core-icon-button>
+            <div flex>Simple List</div>
+
+            <core-icon-button icon="search"></core-icon-button>
+            <core-icon-button icon="more-vert"></core-icon-button>
+          </core-toolbar>
+
+          <simple-list id="list" data="{{data}}" height="80" fit>
+            <template>
+              <div class="item {{ {selected: selected} | tokenList }}"> {{_.name}} <br /> <p><i>{{_.description}}</i></p> </div>
+            </template>
+          </simple-list>
+
+        </core-header-panel>
+
+      </template>
+
+      <script src="demo-list.js"></script>  
+    </polymer-element>
+
+  </body>
+
+</html>
