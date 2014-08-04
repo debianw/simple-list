@@ -73,7 +73,7 @@
           
           <!-- main content -->
           <div flex layout vertical>
-            <simple-list data="{{data}}" height="80" flex>
+            <simple-list id="list" data="{{data}}" height="80" flex>
               <template>
                 <div class="item {{ {selected: selected} | tokenList }}"> {{_.name}} <br /> <p><i>{{_.description}}</i></p> </div>
               </template>
