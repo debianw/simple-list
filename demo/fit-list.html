@@ -5,14 +5,14 @@
     <title>Simple List</title>
 
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-    <script src="../components/platform/platform.js"></script>
+    <script src="../platform/platform.js"></script>
 
     <!-- components -->
-    <link rel="import" href="../components/font-roboto/roboto.html">
-    <link rel="import" href="../components/core-header-panel/core-header-panel.html">
-    <link rel="import" href="../components/core-toolbar/core-toolbar.html">
-    <link rel="import" href="../components/core-icon-button/core-icon-button.html">
-    <link rel="import" href="../components/simple-list/simple-list.html">
+    <link rel="import" href="../font-roboto/roboto.html">
+    <link rel="import" href="../core-header-panel/core-header-panel.html">
+    <link rel="import" href="../core-toolbar/core-toolbar.html">
+    <link rel="import" href="../core-icon-button/core-icon-button.html">
+    <link rel="import" href="../simple-list/simple-list.html">
 
     <style>
       html,
@@ -29,7 +29,7 @@
 
   </head>
 
-  <body unresolved>
+  <body unresolved touch-action="auto">
 
     <demo-list></demo-list>
 
@@ -79,18 +79,18 @@
             <core-icon-button icon="more-vert"></core-icon-button>
           </core-toolbar>
 
-          <simple-list data="{{data}}" height="80" fit>
+          <simple-list id="list" data="{{data}}" height="80" fit>
             <template>
-              <div class="item {{ {selected: selected} | tokenList }}"> {{name}} <br /> <p><i>{{description}}</i></p> </div>
+              <div class="item {{ {selected: selected} | tokenList }}"> {{_.name}} <br /> <p><i>{{_.description}}</i></p> </div>
             </template>
           </simple-list>
 
         </core-header-panel>
 
       </template>
-    </polymer-element>
 
-    <script src="demo-list.js"></script>
+      <script src="demo-list.js"></script>  
+    </polymer-element>
 
   </body>
 
