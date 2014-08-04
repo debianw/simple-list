@@ -17,9 +17,9 @@
         this.scroll = new IScroll($viewport, {
           probeType: 3,
           mouseWheel: true,
-          scrollbars: true,
-          bounceEasing: 'elastic', 
-          bounceTime: 1200
+          scrollbars: true
+          //bounceEasing: 'elastic', 
+          //bounceTime: 300
         });
 
         this.scroll.on('scroll', this._boundScrollHandler);
@@ -52,6 +52,16 @@
       this._physicalHeight = this.height * this._physicalCount;
 
       this.scroll.refresh(); // refresh iscroll
+    },
+
+    /**
+     *
+     */
+
+    pushItemData: function (source, dest) {
+      this.super(arguments);
+
+      dest._ = source;
     },
 
     /**

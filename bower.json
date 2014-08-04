@@ -18,8 +18,7 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests",
-    "demo"
+    "tests"
   ],
   "dependencies": {
     "polymer": "~0.3.3",
