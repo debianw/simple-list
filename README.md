@@ -9,7 +9,7 @@ _Simple infinite list. This is a Polymer web-component that can handle tons of d
 ```html
 <simple-list data="{{data}}" height="80">
   <template>
-    <div class="item {{ {selected: selected} | tokenList }}"> Item {{id}} <br /> <p><i>{{description}}</i></p> </div>
+    <div class="item {{ {selected: selected} | tokenList }}"> Item {{_.id}} <br /> <p><i>{{_.description}}</i></p> </div>
   </template>
 </simple-list>
 ```
