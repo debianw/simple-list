@@ -16,8 +16,8 @@ _Simple infinite list. This is a Polymer web-component that can handle tons of d
 
 ## Demos
 
-* [simple-list inside a fit layout](http://debianw.github.io/components/simple-list/demo/fit-list.html)
-* [simple-list inside a flex layout](http://debianw.github.io/components/simple-list/demo/flex-list.html)
+* [simple-list inside a fit layout](http://debianw.github.io/simple-list/components/simple-list/demo/fit-list.html)
+* [simple-list inside a flex layout](http://debianw.github.io/simple-list/components/simple-list/demo/flex-list.html)
 
 core-list
 ============
