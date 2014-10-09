@@ -1,6 +1,6 @@
 {
   "name": "simple-list",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "simple-list extends from `Polymer/core-list`, it displays a virtual, infinite list. Instead of native scroll this component use iscroll",
   "keywords": [
     "Polymer",
