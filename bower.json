@@ -25,7 +25,7 @@
   "dependencies": {
     "polymer": "~0.4.2",
     "core-list": "Polymer/core-list#~0.4.2",
-    "simple-scroller": "~0.0.1"
+    "simple-scroller": "~0.0.2"
   },
   "devDependencies": {
     "font-roboto": "Polymer/font-roboto#~0.4.2",
