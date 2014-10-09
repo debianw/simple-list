@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <title>Simple List</title>
+
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <script src="../platform/platform.js"></script>
+
+    <!-- components -->
+    <link rel="import" href="simple-list.html">
+
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      demo-list {
+        height: 100%;
+      }
+    </style>
+
+  </head>
+
+  <body unresolved>
+
+    <demo-list></demo-list>
+
+
+    <polymer-element name="demo-list">
+      <template>
+        <style>
+          #container {
+            height: 100%;
+          }
+
+          .top,
+          .bottom {
+            height: 60px;
+            background: #03a9f4;
+            color: white;
+            text-align: center;
+          }
+
+          .inner-content {
+            position: relative;
+          }
+
+          #list {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+          }
+
+          .item {
+            color: #444444;
+            height: 80px;
+            border-bottom: 1px solid #ccc;
+            padding: 20px 5px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+          }
+
+          .item i {
+            font-size: 14px;
+            color: #999999;
+          }
+
+          .selected {
+            background: #ebebeb;
+          }
+        </style>
+
+        <div layout vertical id="container">
+
+          <!-- top -->
+          <div class="top">top section</div>
+          
+          <!-- main content -->
+          <div flex layout vertical class="inner-content">
+            <simple-list id="list" data="{{data}}" height="80">
+              <template>
+                <div class="item {{ {selected: selected} | tokenList }}"> {{model.name}} <br /> <p><i>{{model.description}}</i></p> </div>
+              </template>
+            </simple-list>
+          </div>
+          
+          <!-- bottom -->
+          <div class="bottom">bottom section</div>
+        </div>
+
+      </template>
+
+      <script>
+        Polymer({
+
+          //
+          created: function () {
+            this._boundOnActivated = this.onActivate.bind(this);
+          },
+
+          //
+          ready: function () {
+            this.data = this.loadData();
+
+            this.$.list.addEventListener('core-activate', this._boundOnActivated);
+            window.list = this.$.list;
+          },
+
+          //
+          loadData: function () {
+            var data = [];
+
+            for (var i = 0, len = 500; i < len; i++) {
+              data.push({
+                id: i,
+                name: 'Item: '+i,
+                description: 'description goes here ...'+i
+              });
+            }
+
+            return data;
+          },
+
+          //
+          onActivate: function (e) {
+            var obj = e.detail.data;
+
+            console.log('activated: ', obj);
+          }
+
+        });
+      </script>
+    </polymer-element>
+
+  </body>
+
+</html>
