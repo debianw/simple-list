@@ -1,6 +1,6 @@
 (function () {
 
-  Polymer('demo-list', {
+  Polymer({
 
     //
     created: function () {
@@ -12,13 +12,14 @@
       this.data = this.loadData();
 
       this.$.list.addEventListener('core-activate', this._boundOnActivated);
+      window.list = this.$.list;
     },
 
     //
     loadData: function () {
       var data = [];
 
-      for (var i = 0, len = 1000; i < len; i++) {
+      for (var i = 0, len = 500; i < len; i++) {
         data.push({
           id: i,
           name: 'Item: '+i,

@@ -29,7 +29,7 @@
 
   </head>
 
-  <body unresolved touch-action="auto">
+  <body unresolved>
 
     <demo-list></demo-list>
 
@@ -81,7 +81,7 @@
 
           <simple-list id="list" data="{{data}}" height="80" fit>
             <template>
-              <div class="item {{ {selected: selected} | tokenList }}"> {{_.name}} <br /> <p><i>{{_.description}}</i></p> </div>
+              <div class="item {{ {selected: selected} | tokenList }}"> {{model.name}} <br /> <p><i>{{model.description}}</i></p> </div>
             </template>
           </simple-list>
 

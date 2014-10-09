@@ -1,16 +1,57 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../core-list/core-list.html">
+<link rel="import" href="../simple-scroller/simple-scroller.html">
 
 <polymer-element name="simple-list" extends="core-list" layout vertical>
   <template>
     <link rel="stylesheet" type="text/css" href="simple-list.css">
 
-    <div id="viewport" flex>
-      <div id="scroll"><content></content></div>
-    </div>
+    <simple-scroller id="scroller">
+      <shadow></shadow>
+    </simple-scroller>
 
   </template>
 
-  <script src="../iscroll/build/iscroll-probe.js"></script>
-  <script src="simple-list.js"></script>
+  <script>
+    (function () {
+
+      Polymer({
+
+        /**
+         *
+         */
+
+        ready: function () {
+          this.super(arguments);
+
+          // replace default scroll target
+          this.scrollTarget = this.$.scroller;
+          this.scroll = this.scrollTarget.scroll;
+        },
+
+        /**
+         *
+         */
+
+        scrollToItem: function (index) {
+          this.scroll.scrollTo(0, -index * this.height);
+        },
+
+        /**
+         *
+         */
+
+        refresh: function (force) {
+          this.super(arguments);
+
+          if (force) {
+            this.scroll.refresh();
+          }
+        }
+
+      });
+
+    })();
+  </script>
+
 </polymer-element>

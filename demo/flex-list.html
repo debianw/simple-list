@@ -26,7 +26,7 @@
 
   </head>
 
-  <body unresolved touch-action="auto">
+  <body unresolved>
 
     <demo-list></demo-list>
 
@@ -44,6 +44,18 @@
             background: #03a9f4;
             color: white;
             text-align: center;
+          }
+
+          .inner-content {
+            position: relative;
+          }
+
+          #list {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
           }
 
           .item {
@@ -72,10 +84,10 @@
           <div class="top">top section</div>
           
           <!-- main content -->
-          <div flex layout vertical>
-            <simple-list id="list" data="{{data}}" height="80" flex>
+          <div flex layout vertical class="inner-content">
+            <simple-list id="list" data="{{data}}" height="80">
               <template>
-                <div class="item {{ {selected: selected} | tokenList }}"> {{_.name}} <br /> <p><i>{{_.description}}</i></p> </div>
+                <div class="item {{ {selected: selected} | tokenList }}"> {{model.name}} <br /> <p><i>{{model.description}}</i></p> </div>
               </template>
             </simple-list>
           </div>
