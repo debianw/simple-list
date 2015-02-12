@@ -17,6 +17,11 @@
 
       Polymer({
 
+        // Fix problem on deferred creaton of IScroll object
+        get scroll() {
+            return this.$.scroller.scroll;
+        },
+
         /**
          *
          */
@@ -25,8 +30,8 @@
           this.super(arguments);
 
           // replace default scroll target
-          this.scrollTarget = this.$.scroller;
-          this.scroll = this.scrollTarget.scroll;
+          //this.scrollTarget = this.$.scroller;
+          //this.scroll = this.scrollTarget.scroll;
         },
 
         /**
